@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<!-- Latest compiled and minified CSS -->
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+				<link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+			<style>
+				.vertical-menu {
+					background-color: #ffffff;
+					height: inherit;
+				}
+				.vertical-menu-item {
+					padding: 10px 0px 10px 20px;
+					font-family: Helvetica;
+					font-size: 15px;
+					border-bottom: #e6e6e6 solid 1px;
+				}
+				.vertical-menu-item-selected {
+					padding-bottom: 7px;
+					border-bottom: #3e3e3e solid 3px;
+				}
+				.menu-item {
+					padding: 10px 10px;
+					margin: 0px 5px;
+					font-family: Helvetica;
+					font-size: 15px;
+				}
+				.menu-item-selected {
+					border-bottom: #3e3e3e solid 3px;
+				}
+				* {
+					  box-sizing: content-box;
+				}	 
+			   /* Sticky footer styles
+			  -------------------------------------------------- */
+				html {
+				  	position: relative;
+				    min-height: 100%;
+				}
+				body {
+			  		/* Margin bottom by footer height */
+					margin-bottom: 60px;
+				}
+				.footer {
+					position: absolute;
+				    bottom: 0;
+  					width: 100%;
+  					/* Set the fixed height of the footer here */
+  					height: 60px;
+					text-align: center;
+				}
+	  			.name-text {
+					font-weight: bolder;
+					font-size: 16px;
+				}
+				.header {
+					border-top: #3e3e3e solid 2px;
+					border-bottom: #cccccc solid 1px;
+					padding-bottom: 10px;
+				}
+							
+			</style>
+		</head>
+		<body>
+
+			<!-- header start -->
+			<header class="header container-fluid">
+				<div class=row>
+				    <!-- big screen header start -->
+					<div class="col-md-offset-2 col-sm-offset-1 col-md-8 col-sm-10 clearfix hidden-xs" style="padding-top:10px">
+							<div class="name-text pull-left" style="text-align:center;">Jitesh Khandelwal</div>
+							<div class="pull-right">
+								<span class="menu-item">Projects</span>
+								<span class="menu-item menu-item-selected">About</span>
+								<span class="menu-item">Notes</span>
+								<span class="menu-item">Quotes</span>
+							</div>
+					</div>
+				    <!-- big screen header end -->
+				    <!-- small screen header start -->
+					<div class="col-md-offset-2 col-md-8 clearfix visible-xs" style="padding-top:10px">
+						<i id="trigger" style="font-size:21px; color:#343434;" class="fa fa-bars pull-left" aria-hidden="true"></i>
+						<div class="name-text" style="text-align:center;">Jitesh Khandelwal</div>
+						<div id='slider'>
+							<div class='vertical-menu'>
+								<div class="vertical-menu-item">Projects</div>
+								<div class="vertical-menu-item vertical-menu-item-selected">About</div>
+								<div class="vertical-menu-item">Notes</div>
+								<div class="vertical-menu-item">Quotes</div>
+							</div>
+						</div>
+					</div>
+				    <!-- small screen header end -->
+				</div>
+			</header>
+			<!-- header start -->
+
+			<!-- footer start -->
+			<footer class="footer">
+				<div class="container">
+					<div>
+						<span>Facebook</span>
+						<span>.</span>
+						<span>Instagram</span>
+						<span>.</span>
+						<span>Twitter</span>
+					</div>
+					<p class="text-muted">© 2017</p>
+				</div>
+			</footer>
+			<!-- footer end -->
+
+			<script src="./assets/js/jquery-3.2.1.slim.min.js"></script>
+			<script src="./assets/js/slidereveal.js"></script>
+			<script>
+			$(document).ready(function(){
+				$('#slider').slideReveal({
+					trigger: $("#trigger"),
+					push: false,
+					overlay: true
+				});
+			});
+			</script>
+
+		</body>
+</html>
