@@ -1,0 +1,54 @@
+            <!-- header start -->
+			<header class="container-fluid">
+
+                <!-- big screen header start -->
+				<div class="row hidden-xs-down header">
+                    <div class="col-md-2 col-sm-1 px-0 py-2"></div>
+					<div class="clearfix col-md-8 col-sm-10 px-0 py-2">
+							<div class="name-text pull-left" style="text-align:center;">Jitesh Khandelwal</div>
+							<div class="pull-right">
+								<span class="menu-item menu-item-selected">About</span>
+								<span class="menu-item">Projects</span>
+								<span class="menu-item">Notes</span>
+								<span class="menu-item">Quotes</span>
+							</div>
+					</div>
+                    <div class="col-md-2 col-sm-1 px-0 py-2"></div>
+                </div>
+                <!-- big screen header end -->
+
+                <!-- small screen header start -->
+				<div class="row align-items-center hidden-sm-up header">
+                    <div class="col-12 px-0 py-2">
+						<div id="trigger" class="fa fa-bars pull-left menu-puller py-1" aria-hidden="true"></div>
+						<div class="name-text">Jitesh Khandelwal</div>
+                    </div>
+				</div>
+                <!-- small screen header end -->
+
+                <!-- menu side drawer start -->
+                <div id='slider' class="hidden-sm-up">
+                    <div class='vertical-menu'>
+                        <div class="vertical-menu-item vertical-menu-item-selected">About</div>
+                        <div class="vertical-menu-item">Projects</div>
+                        <div class="vertical-menu-item">Notes</div>
+                        <div class="vertical-menu-item">Quotes</div>
+                    </div>
+                </div>
+                <!-- menu side drawer end -->
+
+			</header>
+			<!-- header start -->
+
+			<script src="./assets/js/jquery-3.2.1.slim.min.js"></script>
+			<script src="./assets/js/slidereveal.js"></script>
+			<script>
+                $(document).ready(function(){
+                    $('#slider').slideReveal({
+                        trigger: $("#trigger"),
+                        push: false,
+                        overlay: true
+                    });
+                });
+			</script>
+

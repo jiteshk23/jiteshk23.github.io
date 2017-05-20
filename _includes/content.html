@@ -1,0 +1,21 @@
+            <div class="container-fluid">
+
+                <!-- big screen content start -->
+				<div class="row hidden-xs-down">
+                    <div class="col-md-2 col-sm-1 px-0 py-2"></div>
+					<div class="col-md-8 col-sm-10 px-0 py-2">
+                        {% include {{ page.content_layout }} %}
+					</div>
+                    <div class="col-md-2 col-sm-1 px-0 py-2"></div>
+                </div>
+                <!-- big screen content end -->
+
+                <!-- small screen content start -->
+				<div class="row hidden-sm-up">
+                    <div class="col-12 px-0 py-2">
+                        {% include {{ page.content_layout }} %}
+					</div>
+				</div>
+                <!-- small screen content end -->
+
+            </div>
