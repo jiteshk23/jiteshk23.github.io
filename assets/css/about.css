@@ -1,0 +1,21 @@
+.about-pic {
+    height: 180px;
+    width: 180px;
+    background-image: url('../images/about.jpg');
+    border-radius: 90px;
+    background-size: cover;
+    margin: auto;
+    border: #D95454 solid 4px;
+    margin-top: 80px;
+}
+.about-hello {
+    text-align: center;
+    font-size: 300%;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: #d95454;
+    margin-top: 35px;
+}
+.about-content {
+
+}
