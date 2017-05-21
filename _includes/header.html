@@ -1,74 +1,73 @@
-            <!-- header start -->
-			<header class="container-fluid">
+<!-- header start -->
+<header class="container-fluid">
 
-                <!-- big screen header start -->
-				<div class="row hidden-xs-down header">
-                    <div class="col-md-2 col-sm-1 px-0 py-2"></div>
-					<div class="clearfix col-md-8 col-sm-10 px-0 py-2">
-							<div class="name-text pull-left" style="text-align:center;">Jitesh Khandelwal</div>
-							<div class="pull-right">
-								<a href="/index.html"><span class="menu-item {% if page.title == 'about' %}{{ 'menu-item-selected' }}{% endif %}">About</span></a>
-								<a href="/projects.html"><span class="menu-item {% if page.title == 'projects' %}{{ 'menu-item-selected' }}{% endif %}">Projects</span></a>
-								<a href="notes.html"><span class="menu-item {% if page.title == 'notes' %}{{ 'menu-item-selected' }}{% endif %}">Notes</span></a>
-								<a href="quotes.html"><span class="menu-item {% if page.title == 'quotes' %}{{ 'menu-item-selected' }}{% endif %}">Quotes</span></a>
-							</div>
-					</div>
-                    <div class="col-md-2 col-sm-1 px-0 py-2"></div>
-                </div>
-                <!-- big screen header end -->
+	<!-- big screen header start -->
+	<div class="row hidden-xs-down header">
+		<div class="col-md-2 col-sm-1 px-0 py-2"></div>
+		<div class="clearfix col-md-8 col-sm-10 px-0 py-2">
+			<div class="name-text pull-left" style="text-align:center;">Jitesh Khandelwal</div>
+			<div class="pull-right">
+				<a href="/index.html"><span class="menu-item {% if page.title == 'about' %}{{ 'menu-item-selected' }}{% endif %}">About</span></a>
+				<a href="/projects.html"><span class="menu-item {% if page.title == 'projects' %}{{ 'menu-item-selected' }}{% endif %}">Projects</span></a>
+				<a href="notes.html"><span class="menu-item {% if page.title == 'notes' %}{{ 'menu-item-selected' }}{% endif %}">Notes</span></a>
+				<a href="quotes.html"><span class="menu-item {% if page.title == 'quotes' %}{{ 'menu-item-selected' }}{% endif %}">Quotes</span></a>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-1 px-0 py-2"></div>
+	</div>
+	<!-- big screen header end -->
 
-                <!-- small screen header start -->
-				<div class="row align-items-center hidden-sm-up header">
-                    <div class="col-12 px-0 py-2">
-						<div id="trigger" class="fa fa-bars pull-left menu-puller py-1" aria-hidden="true"></div>
-						<div class="name-text">Jitesh Khandelwal</div>
-                    </div>
-				</div>
-                <!-- small screen header end -->
+	<!-- small screen header start -->
+	<div class="row align-items-center hidden-sm-up header">
+		<div class="col-12 px-0 py-2">
+			<div id="trigger" class="fa fa-bars pull-left menu-puller py-1" aria-hidden="true"></div>
+			<div class="name-text">Jitesh Khandelwal</div>
+		</div>
+	</div>
+	<!-- small screen header end -->
 
-                <!-- menu side drawer start -->
-                <div id='slider' class="hidden-sm-up">
-                    <div class='vertical-menu'>
-                        <a href="/index.html"><div class="vertical-menu-item {% if page.title == 'about' %}{{ 'vertical-menu-item-selected' }}{% endif %}">About</div><a/>
-                        <a href="/projects.html"><div class="vertical-menu-item {% if page.title == 'projects' %}{{ 'vertical-menu-item-selected' }}{% endif %}">Projects</div></a>
-                        <a href="/notes.html"><div class="vertical-menu-item {% if page.title == 'notes' %}{{ 'vertical-menu-item-selected' }}{% endif %}">Notes</div></a>
-                        <a href="/quotes.html"><div class="vertical-menu-item {% if page.title == 'quotes' %}{{ 'vertical-menu-item-selected' }}{% endif %}">Quotes</div></a>
-                    </div>
-                </div>
-                <!-- menu side drawer end -->
+	<!-- menu side drawer start -->
+	<div id='slider' class="hidden-sm-up">
+		<div class='vertical-menu'>
+			<a href="/index.html"><div class="vertical-menu-item {% if page.title == 'about' %}{{ 'vertical-menu-item-selected' }}{% endif %}">About</div><a/>
+				<a href="/projects.html"><div class="vertical-menu-item {% if page.title == 'projects' %}{{ 'vertical-menu-item-selected' }}{% endif %}">Projects</div></a>
+				<a href="/notes.html"><div class="vertical-menu-item {% if page.title == 'notes' %}{{ 'vertical-menu-item-selected' }}{% endif %}">Notes</div></a>
+				<a href="/quotes.html"><div class="vertical-menu-item {% if page.title == 'quotes' %}{{ 'vertical-menu-item-selected' }}{% endif %}">Quotes</div></a>
+			</div>
+		</div>
+		<!-- menu side drawer end -->
 
-			</header>
-			<!-- header start -->
+	</header>
+	<!-- header start -->
 
-			<script src="./assets/js/jquery-3.2.1.slim.min.js"></script>
-			<script src="./assets/js/slidereveal.js"></script>
-			<script>
-                $(document).ready(function(){
-                    
-                    gotourl = window.location.href;
-                    haschanged = false;
+	<script src="./assets/js/jquery-3.2.1.slim.min.js"></script>
+	<script src="./assets/js/slidereveal.js"></script>
+	<script>
+	$(document).ready(function(){
 
-                    $('#slider').slideReveal({
-                        trigger: $("#trigger"),
-                        push: false,
-                        overlay: true,
-                        hidden: function() {
-                            if(haschanged) {
-                                haschanged = !haschanged;
-                                window.location.href = gotourl;
-                            }
-                        }
-                    });
+		gotourl = window.location.href;
+		haschanged = false;
 
-                    $('#slider a').on('click', function(e){
-                        e.preventDefault();
-                        haschanged = true;
-                        gotourl = $(this).attr('href');
-                        $('#slider').slideReveal('hide'); 
-                    });
+		$('#slider').slideReveal({
+			trigger: $("#trigger"),
+			push: false,
+			overlay: true,
+			hidden: function() {
+				if(haschanged) {
+					haschanged = !haschanged;
+					window.location.href = gotourl;
+				}
+			}
+		});
 
-                    $('#slider').show();
+		$('#slider a').on('click', function(e){
+			e.preventDefault();
+			haschanged = true;
+			gotourl = $(this).attr('href');
+			$('#slider').slideReveal('hide');
+		});
 
-                });
-			</script>
+		$('#slider').show();
 
+	});
+	</script>

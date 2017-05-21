@@ -1,1 +1,4 @@
-quotes
+<div class="page-desc">{{ page.description }}</div>
+{% for quote in site.data.quotes %}
+<div class="quote-item"><span>{{ forloop.index }}. </span>{{ quote }}</div>
+{% endfor %}
