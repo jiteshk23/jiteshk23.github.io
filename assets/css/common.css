@@ -1,3 +1,13 @@
 .js #slider {
     display: none;
 }
+
+.page-desc {
+    border-left: #cacaca solid 2px;
+    padding: 10px;
+    font-style: italic;
+    color: #cacaca;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
